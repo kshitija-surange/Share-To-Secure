@@ -28,3 +28,8 @@ Application Roles 
 Workflow Details
 -----------------
 
+Application Files
+-----------------
+[ShareToSecure.json](./Application-Files/ShareToSecure.json)
+
+[ShareToSecure.sol](./Application-Files/ShareToSecure.sol)
