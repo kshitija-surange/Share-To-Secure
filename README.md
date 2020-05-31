@@ -50,6 +50,20 @@ Workflow Details
 ![state diagram of the workflow](Resources/ShareToSecure.jpg)
 
 
+## Services needed to be deployed on Azure:
+
+- [ ] Azure Cosmos DB
+- [ ] Cosmos DB - Gremlin API
+- [ ] Azure Blockchain Service
+- [ ] Service Bus
+- [ ] Event Grid
+- [ ] Logic Apps
+- [ ] Key Vault
+- [ ] Azure Functions
+- [ ] API Gateway
+- [ ] Computer Vision
+
+
 Application Files
 -----------------
 [ShareToSecure.json](./Application-Files/ShareToSecure.json)
