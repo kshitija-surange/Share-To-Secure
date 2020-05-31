@@ -1,6 +1,9 @@
 Share to Secure Application for Blockchain Enabled Insurance on Azure Blockchain Workbench
 ==================================================================
 
+Submitted for Hackerearth Microsoft Azure Hackathon (Theme: Insurance & Banking)
+---------
+
 Overview 
 ---------
 
