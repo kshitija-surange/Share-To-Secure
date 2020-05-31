@@ -15,6 +15,12 @@ Insurance systems need a reform. First, we need to digitize and securely share c
 **Transparency for relevant institutions:** A blockchain would remove the need for unnecessary middlemen and force integrity and accountability upon those that may previously have been corrupt. The insurance process would benefit from a system in which no party owns the data yet multiple stakeholders can view and modify it – where all have same-time access to the shared truth on patient health (past and present), processing status of the current claim, the history of past claims, etc. 
 
 
+Deployment of Azure Blockchain Workbench
+------------------
+
+[Deployment of Azure Blockchain Workbench](https://docs.microsoft.com/en-us/azure/blockchain/workbench/deploy)
+
+
 Application Roles 
 ------------------
 
