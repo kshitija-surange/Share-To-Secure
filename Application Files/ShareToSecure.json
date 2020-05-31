@@ -1,0 +1,930 @@
+{
+  "ApplicationName": "ShareToSecure2",
+  "DisplayName": "ShareToSecure",
+  "Description": "A simple application to scrutinise a customer",
+  "ApplicationRoles": [
+    {
+      "Name": "Buyer",
+      "Description": "A person who is interested in buying an insurance policy."
+    },
+    {
+      "Name": "BankUnderwriter",
+      "Description": "A bank who will examine financial health of a policy buyer"
+    },
+    {
+      "Name": "MedicalUnderwriter",
+      "Description": "A hospital who will examine medical health of a policy buyer"
+    },
+    {
+      "Name": "InsuranceProvider",
+      "Description": "An insurance company who will issue the policy to the buyer after set expectations met."
+    }
+  ],
+  "Workflows": [
+    {
+      "Name": "ShareToSecure2",
+      "DisplayName": "ShareToSecure2",
+      "Description": "Buy an insurance policy with ShareToSecue",
+      "Initiators": ["Buyer"],
+      "StartState": "BuyPolicy",
+      "Properties": [
+        {
+          "Name": "State",
+          "DisplayName": "State",
+          "Description": "Holds the state of the contract.",
+          "Type": {
+            "Name": "state"
+          }
+        },
+        {
+          "Name": "InsuranceProvider",
+          "DisplayName": "InsuranceProvider",
+          "Description": "HInsuranceProvider",
+          "Type": {
+            "Name": "InsuranceProvider"
+          }
+        },
+        {
+          "Name": "MedicalUnderwriter",
+          "DisplayName": "MedicalUnderwriter",
+          "Description": "MedicalUnderwriter",
+          "Type": {
+            "Name": "MedicalUnderwriter"
+          }
+        },
+        {
+          "Name": "BankUnderwriter",
+          "DisplayName": "BankUnderwriter",
+          "Description": "BankUnderwriter",
+          "Type": {
+            "Name": "BankUnderwriter"
+          }
+        },
+        
+        {
+          "Name": "Buyer",
+          "DisplayName": "Buyer",
+          "Description": "Buyer of policy",
+          "Type": {
+            "Name": "Buyer"
+          }
+        },
+        
+        {
+          "Name": "AadhaarCardNumber",
+          "DisplayName": "Aadhaar Card Number",
+          "Description": "...",
+          "Type": {
+            "Name": "int"
+          }
+        },
+        {
+          "Name": "Sex",
+          "DisplayName": "Sex",
+          "Description": "...",
+          "Type": {
+            "Name": "string"
+          }
+        },
+        {
+          "Name": "BankName",
+          "DisplayName": "Bank Name",
+          "Description": "...",
+          "Type": {
+            "Name": "BankUnderwriter"
+          }
+        },
+        {
+          "Name": "AccountNumber",
+          "DisplayName": "Account Number",
+          "Description": "...",
+          "Type": {
+            "Name": "int"
+          }
+        },
+        {
+          "Name": "InsurerName",
+          "DisplayName": "Insurer Name",
+          "Description": "...",
+          "Type": {
+            "Name": "InsuranceProvider"
+          }
+        },
+        {
+          "Name": "PolicyName",
+          "DisplayName": "Policy Name",
+          "Description": "...",
+          "Type": {
+            "Name": "string"
+          }
+        },
+        {
+          "Name": "HospitalName",
+          "DisplayName": "Hospital Name",
+          "Description": "...",
+          "Type": {
+            "Name": "MedicalUnderwriter"
+          }
+        },
+        {
+          "Name": "PAN",
+          "DisplayName": "PAN",
+          "Description": "...",
+          "Type": {
+            "Name": "string"
+          }
+        },
+        {
+          "Name": "SumAssured",
+          "DisplayName": "Sum Assured",
+          "Description": "...",
+          "Type": {
+            "Name": "int"
+          }
+        },
+        {
+          "Name": "PolicyTerm",
+          "DisplayName": "Policy Term (in years)",
+          "Description": "...",
+          "Type": {
+            "Name": "int"
+          }
+        },
+        {
+          "Name": "PaymentTerm",
+          "DisplayName": "Payment Term (1-12)",
+          "Description": "...",
+          "Type": {
+            "Name": "int"
+          }
+        },
+        {
+          "Name": "PremiumPayment",
+          "DisplayName": "Premium Payment - True/False",
+          "Description": "...",
+          "Type": {
+            "Name": "bool"
+          }
+        },
+        {
+          "Name": "CustomerVerification",
+          "DisplayName": "CustomerVerification - True/False",
+          "Description": "...",
+          "Type": {
+            "Name": "bool"
+          }
+        },
+        {
+          "Name": "Active",
+          "DisplayName": "User Active in Bank - True/False",
+          "Description": "...",
+          "Type": {
+            "Name": "bool"
+          }
+        },
+        {
+          "Name": "FinancialHealthPoints",
+          "DisplayName": "FinancialHealthPoints (0-900)",
+          "Description": "...",
+          "Type": {
+            "Name": "int"
+          }
+        },
+        {
+          "Name": "BankUnderwritingResult",
+          "DisplayName": "BankUnderwritingResult - True/False",
+          "Description": "...",
+          "Type": {
+            "Name": "bool"
+          }
+        },
+        {
+          "Name": "ActiveStatus",
+          "DisplayName": "User Active Status in Hospital - True/False",
+          "Description": "...",
+          "Type": {
+            "Name": "bool"
+          }
+        },
+        {
+          "Name": "HealthScore",
+          "DisplayName": "HealthScore - (0-1000)",
+          "Description": "...",
+          "Type": {
+            "Name": "int"
+          }
+        },
+        {
+          "Name": "PhysicalVerification",
+          "DisplayName": "Physical Check Up Done - True/False",
+          "Description": "...",
+          "Type": {
+            "Name": "bool"
+          }
+        },
+        {
+          "Name": "MedicalUnderwriting",
+          "DisplayName": "MedicalUnderwriting - True/False",
+          "Description": "...",
+          "Type": {
+            "Name": "bool"
+          }
+        },
+        {
+          "Name": "PremiumRecieved",
+          "DisplayName": "Premium Payment Recieved - True/False",
+          "Description": "...",
+          "Type": {
+            "Name": "bool"
+          }
+        },
+        {
+          "Name": "PolicyNumber",
+          "DisplayName": "PolicyNumber",
+          "Description": "...",
+          "Type": {
+            "Name": "int"
+          }
+        },
+        {
+          "Name": "IssuanceDate",
+          "DisplayName": "IssuanceDate - DDMMYYYY",
+          "Description": "...",
+          "Type": {
+            "Name": "int"
+          }
+        },
+        {
+          "Name": "MaturityDate",
+          "DisplayName": "MaturityDate - DDMMYYYY",
+          "Description": "...",
+          "Type": {
+            "Name": "int"
+          }
+        },
+        {
+          "Name": "PremiumFinal",
+          "DisplayName": "Final Premium (INR)",
+          "Description": "...",
+          "Type": {
+            "Name": "int"
+          }
+        },
+        {
+          "Name": "SumAssuredFinal",
+          "DisplayName": "Final Sum Assured (INR)",
+          "Description": "...",
+          "Type": {
+            "Name": "int"
+          }
+        },
+        {
+          "Name": "PolicyIssued",
+          "DisplayName": "Policy Issued - True/False",
+          "Description": "...",
+          "Type": {
+            "Name": "bool"
+          }
+        },
+        {
+           "Name": "ClaimReason",
+           "Description": "...",
+           "DisplayName": "Claim Reason",
+           "Type": {
+           "Name": "string"
+          }
+        },{
+          "Name": "ClaimResponder",
+          "Description": "...",
+          "DisplayName": "Claim Reason",
+          "Type": {
+            "Name": "MedicalUnderwriter"
+          }
+        },
+        {
+           "Name": "ClaimReasonVerification",
+           "Description": "...",
+           "DisplayName": "Claim Reason Verification",
+        "Type": {
+        "Name": "bool"
+        }
+        },
+        {
+        "Name": "ClaimReasonRemark",
+        "Description": "...",
+        "DisplayName": "Claim Reason Remark",
+        "Type": {
+        "Name": "string"
+        }
+        }
+      ],
+      "Constructor": {
+        "Parameters": [
+          
+          {
+            "Name": "aadhaarCardNumber",
+            "DisplayName": "Aadhaar Card Number - int",
+            "Description": "...",
+            "Type": {
+              "Name": "int"
+            }
+          },
+          {
+            "Name": "sex",
+            "DisplayName": "Sex - string(M/F/O)",
+            "Description": "",
+            "Type": {
+              "Name": "string"
+            }
+          },
+          {
+            "Name": "bankName",
+            "DisplayName": "Bank Name - string",
+            "Description": "...",
+            "Type": {
+              "Name": "BankUnderwriter"
+            }
+          },
+          {
+            "Name": "accountNumber",
+            "DisplayName": "Account Number - string",
+            "Description": "...",
+            "Type": {
+              "Name": "int"
+            }
+          },
+          {
+            "Name": "insurerName",
+            "DisplayName": "Insurer Name",
+            "Description": "...",
+            "Type": {
+              "Name": "InsuranceProvider"
+            }
+          },
+          {
+            "Name": "policyName",
+            "DisplayName": "Policy Name (E.g. Ayushman Bharat,Atmnirbhar Bharat)",
+            "Description": "...",
+            "Type": {
+              "Name": "string"
+            }
+          },
+          {
+            "Name": "hospitalName",
+            "DisplayName": "Hospital Name",
+            "Description": "...",
+            "Type": {
+              "Name": "MedicalUnderwriter"
+            }
+          },
+          {
+            "Name": "pan",
+            "DisplayName": "PAN",
+            "Description": "...",
+            "Type": {
+              "Name": "string"
+            }
+          },
+          {
+            "Name": "sumAssured",
+            "DisplayName": "Sum Assured (INR)",
+            "Description": "...",
+            "Type": {
+              "Name": "int"
+            }
+          },
+          {
+            "Name": "policyTerm",
+            "DisplayName": "Policy Term (In Years)",
+            "Description": "...",
+            "Type": {
+              "Name": "int"
+            }
+          },
+          {
+            "Name": "paymentTerm",
+            "DisplayName": "Payment Term (1-12/Year)",
+            "Description": "...",
+            "Type": {
+              "Name": "int"
+            }
+          },
+          {
+            "Name": "premiumPayment",
+            "DisplayName": "Premium Payment paid? True/False",
+            "Description": "...",
+            "Type": {
+              "Name": "bool"
+            }
+          }
+        ]
+      },
+      "Functions": [
+        {
+          "Name": "ConfirmDetails",
+          "DisplayName": "Confirm Details",
+          "Description": "...",
+          "Parameters": []
+        },
+        {
+          "Name": "SendToBankUnderwriter",
+          "DisplayName": "Send To Bank Underwriter",
+          "Description": "...",
+          "Parameters": [
+          ]
+        },
+        {
+          "Name": "UpdateFinancialHealth",
+          "DisplayName": "Update Financial Health of Customer",
+          "Description": "...",
+          "Parameters": [
+            {
+              "Name": "customerVerification",
+              "Description": "...",
+              "DisplayName": "Customer Verified - True/False",
+              "Type": {
+                "Name": "bool"
+              }
+            },
+            
+            {
+              "Name": "active",
+              "Description": "...",
+              "DisplayName": "Customer Active in Bank - True/False",
+              "Type": {
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "financialHealthPoints",
+              "Description": "...",
+              "DisplayName": "Credit Score of Customer (0-900)",
+              "Type": {
+                "Name": "int"
+              }
+            },
+            {
+              "Name": "bankUnderwritingResult",
+              "DisplayName": "Bank Underwriting Result - True/False",
+              "Description": "...",
+              "Type": {
+                "Name": "bool"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "SendToMedicalUnderwriter",
+          "DisplayName": "Send To Medical Underwriter",
+          "Description": "...",
+          "Parameters": [
+          ]
+        },
+        {
+          "Name": "UpdateMedicalHealth",
+          "DisplayName": "Update Medical Health",
+          "Description": "...",
+          "Parameters": [
+            {
+              "Name": "activeStatus",
+              "DisplayName": "Active Status of Patient - True/False",
+              "Description": "...",
+              "Type": {
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "healthScore",
+              "DisplayName": "Health Score of Patient (0-1000)",
+              "Description": "...",
+              "Type": {
+                "Name": "int"
+              }
+            },
+            {
+              "Name": "physicalVerification",
+              "DisplayName": "Physical Verification Done - True/False",
+              "Description": "...",
+              "Type": {
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "medicalUnderwriting",
+              "DisplayName": "Medical Underwriting Result - True/False",
+              "Description": "...",
+              "Type": {
+                "Name": "bool"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "RecalculatePolicy",
+          "DisplayName": "Recalculate Policy",
+          "Description": "...",
+          "Parameters": [
+            {
+              "Name": "premiumRecieved",
+              "DisplayName": "Premium Payment Recieved - True/False",
+              "Description": "...",
+              "Type": {
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "policyNumber",
+              "DisplayName": "Policy Number",
+              "Description": "...",
+              "Type": {
+                "Name": "int"
+              }
+            },
+            {
+              "Name": "issuanceDate",
+              "DisplayName": "Issuance Date - DDMMYYYY",
+              "Description": "...",
+              "Type": {
+                "Name": "int"
+              }
+            },
+            {
+              "Name": "maturityDate",
+              "DisplayName": "Maturity Date - DDMMYYYY",
+              "Description": "...",
+              "Type": {
+                "Name": "int"
+              }
+            },
+            {
+              "Name": "premiumFinal",
+              "DisplayName": "Final Premium to be offered (INR)",
+              "Description": "...",
+              "Type": {
+                "Name": "int"
+              }
+            },
+            {
+              "Name": "sumAssuredFinal",
+              "DisplayName": "Final Sum Assured (INR)",
+              "Description": "...",
+              "Type": {
+                "Name": "int"
+              }
+            },
+            {
+              "Name": "policyIssued",
+              "DisplayName": "Should Policy be issued? - True/False",
+              "Description": "...",
+              "Type": {
+                "Name": "bool"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "ConfirmPolicy",
+          "DisplayName": "Confirm Policy",
+          "Description": "...",
+          "Parameters": []
+        },
+        {
+          "Name": "Reject",
+          "DisplayName": "Reject",
+          "Description": "...",
+          "Parameters": []
+        },
+        {
+          "Name": "InvokeClaim",
+          "DisplayName": "Invoke Claim of Customer",
+          "Description": "...",
+          "Parameters": [
+            {
+              "Name": "claimReason",
+              "Description": "...",
+              "DisplayName": "Claim Reason",
+              "Type": {
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "claimResponder",
+              "Description": "...",
+              "DisplayName": "Select Hospital ",
+              "Type": {
+                "Name": "MedicalUnderwriter"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "SubmitClaimDetails",
+          "DisplayName": "Submit Claim Details",
+          "Description": "...",
+          "Parameters": [
+            {
+              "Name": "claimReasonVerification",
+              "Description": "...",
+              "DisplayName": "Claim Reason Verification",
+              "Type": {
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "claimReasonRemark",
+              "Description": "...",
+              "DisplayName": "Claim Reason Remark",
+              "Type": {
+                "Name": "string"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "ClaimRequestAcccepted",
+          "DisplayName": "Claim Request Acccepted",
+          "Description": "...",
+          "Parameters": []
+        },
+        {
+          "Name": "ClaimRequestRejected",
+          "DisplayName": "Claim Request Rejected",
+          "Description": "...",
+          "Parameters": []
+        }
+      ],
+      "States": [
+        {
+          "Name": "BuyPolicy",
+          "DisplayName": "BuyPolicy",
+          "Description": "...",
+          "PercentComplete": 10,
+          "Value": 0,
+          "Style": "Success",
+          "Transitions": [
+            {
+              "AllowedRoles": ["Buyer"],
+              "AllowedInstanceRoles": [
+                
+              ],
+              "Description": "...",
+              "Function": "ConfirmDetails",
+              "NextStates": [
+                "RequestUnderwriting"
+              ],
+              "DisplayName": "Confirm Details"
+            }
+          ]
+        },
+        {
+          "Name": "RequestUnderwriting",
+          "DisplayName": "RequestUnderwriting",
+          "Description": "...",
+          "PercentComplete": 20,
+          "Value": 1,
+          "Style": "Success",
+          "Transitions": [
+            {
+              "AllowedRoles": ["InsuranceProvider"],
+              "AllowedInstanceRoles": [
+                
+              ],
+              "Description": "...",
+              "Function": "SendToBankUnderwriter",
+              "NextStates": [
+                "BankUnderwriting"
+              ],
+              "DisplayName": "Send To Bank Underwriter"
+            }
+          ]
+        },
+        {
+          "Name": "BankUnderwriting",
+          "DisplayName": "BankUnderwriting",
+          "Description": "...",
+          "PercentComplete": 30,
+          "Value": 2,
+          "Style": "Success",
+          "Transitions": [
+            {
+              "AllowedRoles": [ "BankUnderwriter"],
+              "AllowedInstanceRoles": [
+               
+              ],
+              "Description": "...",
+              "Function": "UpdateFinancialHealth",
+              "NextStates": [
+                "BankUnderwritingDone"
+              ],
+              "DisplayName": "Update Financial Health"
+            }
+          ]
+        },
+        {
+          "Name": "BankUnderwritingDone",
+          "DisplayName": "BankUnderwritingDone",
+          "Description": "...",
+          "PercentComplete": 40,
+          "Value": 3,
+          "Style": "Success",
+          "Transitions": [
+            {
+              "AllowedRoles": ["InsuranceProvider"],
+              "AllowedInstanceRoles": [
+                
+              ],
+              "Description": "...",
+              "Function": "SendToMedicalUnderwriter",
+              "NextStates": [
+                "MedicalUnderwriting"
+              ],
+              "DisplayName": "Send To Medical Underwriter"
+            }
+          ]
+        },
+        {
+          "Name": "MedicalUnderwriting",
+          "DisplayName": "MedicalUnderwriting",
+          "Description": "...",
+          "PercentComplete": 50,
+          "Value": 4,
+          "Style": "Success",
+          "Transitions": [
+            {
+              "AllowedRoles": [ "MedicalUnderwriter"],
+              "AllowedInstanceRoles": [
+               
+              ],
+              "Description": "...",
+              "Function": "UpdateMedicalHealth",
+              "NextStates": [
+                "MedicalUnderwritingDone"
+              ],
+              "DisplayName": "Update Medical Health"
+            }
+          ]
+        },
+        {
+          "Name": "MedicalUnderwritingDone",
+          "DisplayName": "MedicalUnderwritingDone",
+          "Description": "...",
+          "PercentComplete": 60,
+          "Value": 5,
+          "Style": "Success",
+          "Transitions": [
+            {
+              "AllowedRoles": [  "InsuranceProvider"],
+              "AllowedInstanceRoles": [
+              
+              ],
+              "Description": "...",
+              "Function": "RecalculatePolicy",
+              "NextStates": [
+                "FinalPolicyIssuance"
+              ],
+              "DisplayName": "Recalculate Policy"
+            }
+          ]
+        },
+        {
+          "Name": "FinalPolicyIssuance",
+          "DisplayName": "FinalPolicyIssuance",
+          "Description": "...",
+          "PercentComplete": 80,
+          "Value": 6,
+          "Style": "Success",
+          "Transitions": [
+            {
+              "AllowedRoles": [ "Buyer"],
+              "AllowedInstanceRoles": [
+               
+              ],
+              "Description": "Confirm the policy offer",
+              "Function": "ConfirmPolicy",
+              "NextStates": [
+                "ConfirmPolicyDetails"
+              ],
+              "DisplayName": "Confirm Policy"
+            },
+            {
+              "AllowedRoles": ["Buyer"],
+              "AllowedInstanceRoles": [
+                
+              ],
+              "Description": "Reject the policy offer",
+              "Function": "Reject",
+              "NextStates": [
+                "Rejected"
+              ],
+              "DisplayName": "Reject"
+            }
+          ]
+        },
+        {
+          "Name": "ConfirmPolicyDetails",
+          "DisplayName": "ConfirmPolicyDetails",
+          "Description": "Policy Generation is complete",
+          "PercentComplete": 100,
+          "Value": 7,
+          "Style": "Success",
+          "Transitions": [
+            {
+              "AllowedRoles": ["Buyer", "InsuranceProvider"],
+              "AllowedInstanceRoles": [
+               
+              ],
+              "Description": "...",
+              "Function": "InvokeClaim",
+              "NextStates": [
+                "ClaimVerificationFromHospital"
+              ],
+              "DisplayName": "Invoke Claim"
+            }
+          ]
+        },
+        {
+          "Name": "Rejected",
+          "DisplayName": "Rejected",
+          "Value": 7,
+          "Description": "Policy Rejected",
+          "PercentComplete": 0,
+          "Style": "Failure",
+          "Transitions": []
+        },
+        {
+          "Name": "ClaimVerificationFromHospital",
+          "DisplayName": "Claim Verification From Hospital",
+          "Description": "...",
+          "PercentComplete": 50,
+          "Value": 9,
+          "Style": "Success",
+          "Transitions": [
+            {
+              "AllowedRoles": ["MedicalUnderwriter"],
+              "AllowedInstanceRoles": [
+              ],
+              "Description": "...",
+              "Function": "SubmitClaimDetails",
+              "NextStates": [
+                "ClaimVerificationDone"
+              ],
+              "DisplayName": "Submit Claim Details"
+            }
+          ]
+        },
+        {
+          "Name": "ClaimVerificationDone",
+          "DisplayName": "Claim Verification Done",
+          "Description": "...",
+          "PercentComplete": 90,
+          "Value": 10,
+          "Style": "Success",
+          "Transitions": [
+            {
+              "AllowedRoles": [ "InsuranceProvider"],
+              "AllowedInstanceRoles": [
+               
+              ],
+              "Description": "Claim Request Acccepted",
+              "Function": "ClaimRequestAcccepted",
+              "NextStates": [
+                "ClaimAcccepted"
+              ],
+              "DisplayName": "Claim Request Acccepted"
+            },
+            {
+              "AllowedRoles": ["InsuranceProvider"],
+              "AllowedInstanceRoles": [
+                
+              ],
+              "Description": "Claim Request Rejected",
+              "Function": "ClaimRequestRejected",
+              "NextStates": [
+                "ClaimRejected"
+              ],
+              "DisplayName": "Claim Request Rejected"
+            }
+          ]
+        },
+        {
+          "Name": "ClaimAcccepted",
+          "DisplayName": "Claim Acccepted",
+          "Description": "Claim Acccepted",
+          "PercentComplete": 100,
+          "Value": 11,
+          "Style": "Success",
+          "Transitions": []
+        },
+        {
+          "Name": "ClaimRejected",
+          "DisplayName": "Cllaim Rejected",
+          "Value": 11,
+          "Description": "Policy Rejected",
+          "PercentComplete": 0,
+          "Style": "Failure",
+          "Transitions": []
+        }
+      ]
+    }
+  ]
+}
