@@ -5,7 +5,8 @@ Overview 
 ---------
 
 Insurance systems need a reform. First, we need to digitize and securely share claims data and other associated data (health records for health insurance, automobile records for auto insurance, etc.) across stakeholders. Second, we need to codify business rules and automate claims processing, such that payments are automatically and quickly transferred when claims are verified. 
-SHARE TO SECURE Blockchain solution can help by enabling secure data sharing and claims processing: 
+
+### SHARE TO SECURE Blockchain solution can help by enabling secure data sharing and claims processing: 
 
 **Shared view of truth:** A blockchain system would allow same-time access to the shared truth on patient health (past and present), processing status of the current claim, the history of past claims, etc. This shared database should be permissioned, such that the various parties may only read or write fragments of data that pertain to them. 
 
