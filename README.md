@@ -1,4 +1,4 @@
-Share to Secure Application for Blockchain Enabled Insurance on Azure Blockchain Marketplace
+Share to Secure Application for Blockchain Enabled Insurance on Azure Blockchain Workbench
 ==================================================================
 
 Overview 
