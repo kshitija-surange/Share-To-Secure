@@ -28,6 +28,9 @@ Application Roles 
 Workflow Details
 -----------------
 
+![state diagram of the workflow](Resources/ShareToSecure.jpg)
+
+
 Application Files
 -----------------
 [ShareToSecure.json](./Application-Files/ShareToSecure.json)
