@@ -18,13 +18,13 @@ Insurance systems need a reform. First, we need to digitize and securely share c
 Ideation 
 ---------
 
-[Ideation](Resources/Ideation.png)
+![Ideation](Resources/Ideation.png)
 
 
 Architecture 
 ---------
 
-[Architecture](Resources/Architecture.png)
+![Architecture](Resources/Architecture.png)
 
 
 Deployment of Azure Workbench
