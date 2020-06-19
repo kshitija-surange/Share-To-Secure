@@ -30,7 +30,7 @@ Architecture 
 
 
 Deployment of Azure Workbench
-------------------
+--------------------
 
 [Deployment of Azure Blockchain Workbench](https://docs.microsoft.com/en-us/azure/blockchain/workbench/deploy)
 
